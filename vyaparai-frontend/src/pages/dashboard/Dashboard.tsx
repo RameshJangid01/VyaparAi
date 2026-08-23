@@ -181,7 +181,7 @@ const mapDashboardResponse = (data: any): DashboardData => {
 
       profitGrowth: 0,
     },
-
+    upcomingFestivals: [],
     // Backend SalesTrend7Days
     salesTrend: (
       data?.salesTrend7Days ??

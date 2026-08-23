@@ -472,7 +472,7 @@ export default function Reports() {
             .map((row) =>
                 row
                     .map((value) =>
-                        `"${String(value).replaceAll('"', '""')}"`,
+                        `"${String(value).replace(/"/g, '""')}"`,
                     )
                     .join(','),
             )

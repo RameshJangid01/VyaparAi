@@ -322,9 +322,7 @@ export default function Invoice() {
                 {/* ITEMS */}
 
                 <Table
-                    rowKey={record =>
-                        record.productId
-                    }
+                    rowKey={(record, index) => index ?? 0}
                     pagination={false}
                     scroll={{
                         x: 600,

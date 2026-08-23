@@ -840,11 +840,9 @@ export default function Billing() {
 
                                                     <Tag
                                                         color={
-                                                            product.currentQuantity >
-                                                                product.minimumStockLevel
+                                                            product.currentQuantity > (product.minimumStockLevel ?? 0)
                                                                 ? 'green'
-                                                                : product.currentQuantity >
-                                                                    0
+                                                                : product.currentQuantity > 0
                                                                     ? 'orange'
                                                                     : 'red'
                                                         }
