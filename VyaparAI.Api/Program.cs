@@ -94,7 +94,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 // ---------- CORS: allow only the configured frontend origin ----------
-var frontendUrl = builder.Configuration["FRONTEND_URL"] ?? "https://vyaparai-frontend-plum.vercel.app/";
+var frontendUrl = builder.Configuration["FRONTEND_URL"] ?? "https://vyaparai-frontend-plum.vercel.app";
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("VyaparAIFrontend", policy =>
