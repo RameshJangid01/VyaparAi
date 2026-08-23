@@ -1,0 +1,23 @@
+# Frontend
+vyaparai-frontend/node_modules/
+vyaparai-frontend/dist/
+
+# .NET
+**/bin/
+**/obj/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Logs
+*.log
+
+# TypeScript build info
+*.tsbuildinfo
