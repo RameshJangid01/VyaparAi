@@ -10,7 +10,8 @@ public class User
     public string Id { get; set; } = string.Empty;
 
     [BsonRepresentation(BsonType.ObjectId)]
-    public string BusinessId { get; set; } = string.Empty;
+    [BsonIgnoreIfNull]
+    public string? BusinessId { get; set; }
 
     public string OwnerName { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;

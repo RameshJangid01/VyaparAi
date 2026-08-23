@@ -43,7 +43,6 @@ public class DataSeeder
                 MobileNumber = "9999999999",
                 PasswordHash = hash,
                 Role = "Admin",
-                BusinessId = string.Empty,
                 CreatedAt = DateTime.UtcNow,
                 UpdatedAt = DateTime.UtcNow
             };
