@@ -94,14 +94,15 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 // ---------- CORS: allow only the configured frontend origin ----------
-var frontendUrl = builder.Configuration["FRONTEND_URL"] ?? "https://vyaparai-frontend-plum.vercel.app";
+// var frontendUrl = builder.Configuration["FRONTEND_URL"] ?? "https://vyaparai-frontend-plum.vercel.app";
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("VyaparAIFrontend", policy =>
     {
-        policy.WithOrigins(frontendUrl)
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+        policy
+            .WithOrigins("https://vyaparai-frontend-plum.vercel.app")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
     });
 });
 
@@ -153,13 +154,13 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = "swagger";
 });
 
+app.UseHttpsRedirection();
+
+app.UseCors("VyaparAIFrontend");
+
 app.UseMiddleware<ExceptionMiddleware>();
 
-app.UseHttpsRedirection();
-app.UseCors("VyaparAIFrontend");
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
-
-app.Run();
