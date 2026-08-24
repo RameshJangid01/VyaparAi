@@ -36,7 +36,7 @@ import { useNavigate } from 'react-router-dom'
 
 const { Title, Text } = Typography
 
-const API_URL = 'http://localhost:5000/api'
+const API_URL = 'https://vyaparai-6032.onrender.com/api'
 
 /* =========================
    TYPES
