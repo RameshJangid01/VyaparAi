@@ -100,7 +100,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("VyaparAIFrontend", policy =>
     {
         policy
-            .WithOrigins("https://vyaparai-frontend-plum.vercel.app")
+            .WithOrigins("https://vyaparai-frontend-plum.vercel.app", "http://localhost:5173")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
