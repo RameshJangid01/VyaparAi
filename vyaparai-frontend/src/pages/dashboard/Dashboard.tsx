@@ -330,7 +330,7 @@ export default function Dashboard() {
       const [dashboardResponse, festivalResponse] =
         await Promise.all([
           fetch(
-            'http://localhost:5000/api/dashboard',
+            'https://vyaparai-6032.onrender.com/api/dashboard',
             {
               method: 'GET',
               headers,
@@ -338,7 +338,7 @@ export default function Dashboard() {
           ),
 
           fetch(
-            'http://localhost:5000/api/festivals/upcoming?daysAhead=90',
+            'https://vyaparai-6032.onrender.com/api/festivals/upcoming?daysAhead=90',
             {
               method: 'GET',
               headers,
@@ -410,7 +410,7 @@ export default function Dashboard() {
       console.error('Dashboard error:', err)
 
       setError(
-        'Dashboard data load nahi ho pa raha. Please try again.',
+        'Dashboard data is not loaded. Please try again.',
       )
 
       message.error('Dashboard load failed')
