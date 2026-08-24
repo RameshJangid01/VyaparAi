@@ -26,7 +26,7 @@ const { Title, Text } =
     Typography
 
 const API_URL =
-    'http://localhost:5000/api'
+    'https://vyaparai-6032.onrender.com/api'
 
 const money = (
     value: number,

@@ -297,7 +297,7 @@ export default function Billing() {
     ) => {
         if (product.currentQuantity <= 0) {
             message.error(
-                `${product.name} out of stock hai`,
+                `${product.name} out of stock `,
             )
             return
         }
@@ -315,7 +315,7 @@ export default function Billing() {
                     product.currentQuantity
                 ) {
                     message.warning(
-                        'Available stock se zyada quantity nahi le sakte',
+                        'You cannot order a quantity greater than the available stock.',
                     )
 
                     return current
@@ -547,14 +547,14 @@ export default function Billing() {
     const completeSale = async () => {
         if (cart.length === 0) {
             message.warning(
-                'Pehle product add karo',
+                'first add product',
             )
             return
         }
 
         if (paidAmount > grandTotal) {
             message.error(
-                'Paid amount total se zyada nahi ho sakta',
+                'The paid amount cannot exceed the total.',
             )
             return
         }
