@@ -154,7 +154,7 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = "swagger";
 });
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 
 app.UseCors("VyaparAIFrontend");
 
@@ -164,3 +164,4 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+app.Run();
