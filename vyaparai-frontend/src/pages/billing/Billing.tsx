@@ -205,7 +205,7 @@ export default function Billing() {
             console.error(error)
 
             message.error(
-                'Products load nahi ho paaye',
+                'Products not loaded ',
             )
         } finally {
             setProductsLoading(false)
@@ -252,7 +252,7 @@ export default function Billing() {
             console.error(error)
 
             message.error(
-                'Customers load nahi ho paaye',
+                'Customers not loaded',
             )
         } finally {
             setCustomersLoading(false)
